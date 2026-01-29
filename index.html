@@ -89,7 +89,27 @@ footer a {
 footer a:hover {
     color: #ffffff; 
 }
-      
+.normal-video-section, .normal-audio-section {
+    margin: 30px 0;
+    padding: 15px;
+    border-top: 1px solid #ddd; /* Đường kẻ nhẹ phân cách các phần */
+}
+
+.video-container {
+    max-width: 700px; /* Giới hạn chiều rộng video để không bị quá to */
+    margin: 0 auto;   /* Căn giữa */
+}
+
+video {
+    display: block;
+    border-radius: 4px;
+    background-color: #000; /* Nền đen khi video chưa load */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+audio {
+    margin-top: 10px;
+}  
 
     </style>
 </head>
@@ -99,8 +119,15 @@ footer a:hover {
 <header>
     <h1>Notre-Dame de Paris</h1>
      <h3 style="color: #ffffff; font-weight: normal; margin: 5px 0;">Nhà thờ Đức Bà Paris</h3>
-    <p>Victor Hugo</p>
+ <p>Victor Hugo</p>
 
+    <section class="normal-video-section">
+    <h2 style="text-align: center;">Video Giới Thiệu</h2>
+    <div class="video-container">
+        <video controls width="100%" poster="image.jpg">
+            <source src="intro.mp4" type="video/mp4">
+    </div>
+</section>
 </header>
 
 <main>
@@ -108,7 +135,8 @@ footer a:hover {
         <img src="image.jpg"
              alt="Bìa sách Nhà thờ Đức Bà Paris">
 
-        <section>
+        
+         
             <h2>Tóm tắt nội dung</h2>
             <p>
                 Notre-Dame de Paris:là tiểu thuyết nổi tiếng của Victor Hugo, lấy bối cảnh Paris thế kỷ XV.
@@ -159,7 +187,14 @@ footer a:hover {
      <p>Liên hệ Email: 
         <a href="mailto:truongnguyenhainam2208@gmail.com">truongnguyenhainam2208@gmail.com</a>
     </p>
-   
+   <section class="normal-audio-section">
+    <h2 style="text-align: center;">Tác Phẩm</h2>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <audio controls style="width: 80%;">
+            <source src="final.mp3" type="audio/mp3">
+        </audio>
+    </div>
+</section>
 </footer>
 
 
